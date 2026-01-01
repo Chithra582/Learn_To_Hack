@@ -1,0 +1,50 @@
+Command Name: grep
+
+Description:
+grep (Global Regular Expression Print) is a powerful Linux command used to search for specific
+patterns or strings inside files or command outputs. It is widely used in CTFs and cybersecurity
+for log analysis, finding credentials, flags, IPs, and suspicious patterns.
+
+Basic Syntax:
+grep [options] "pattern" file_name
+
+Example:
+grep "admin" users.txt
+
+Useful Flags:
+
+-i
+Ignores case sensitivity while searching.
+Example:
+grep -i "password" data.txt
+
+-r
+Searches recursively through directories.
+Example:
+grep -r "flag{" /home/user/
+
+-n
+Displays the line number where the match is found.
+Example:
+grep -n "error" logs.txt
+
+-v
+Inverts the match and shows lines that do NOT contain the pattern.
+Example:
+grep -v "root" users.txt
+
+-w
+Searches for the exact word only.
+Example:
+grep -w "admin" users.txt
+
+-l
+Displays only the filenames that contain the match.
+Example:
+grep -l "password" *.txt
+
+Common CTF Use Case:
+Used to quickly locate flags, credentials, IP addresses, or keywords from large files or directories.
+Example:
+grep -r "FLAG{" .
+
