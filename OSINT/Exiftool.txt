@@ -1,0 +1,87 @@
+Short Documentation
+
+What is ExifTool?
+        ExifTool is a command-line tool used in Linux to read, write, and edit metadata from files.
+Metadata is hidden information stored inside files like images, videos, PDFs, and audio files.
+
+Examples of metadata include:
+
+    1.Date and time the file was created
+
+    2.Camera or device used
+
+    3.GPS location
+
+    4.Author or software name
+
+What is ExifTool Used For?
+
+     1.ExifTool is mainly used in:
+
+     2.OSINT (Open Source Intelligence)
+
+     3.Digital forensics
+
+     4.Image and file analysis
+
+Checking hidden or sensitive information in files
+      It helps investigators understand where, when, and how a file was created or modified.
+
+What Can Be Done Using ExifTool?
+
+With ExifTool, we can:
+
+    1.View full metadata of a file
+
+    2.Find GPS location from images
+
+    3.Identify camera or device details
+
+    4.Check editing history
+
+    5.Remove metadata for privacy
+
+Installing ExifTool (Linux)
+     sudo apt update
+     sudo apt install libimage-exiftool-perl
+
+How to Use ExifTool (With Examples)
+   Example 1: View All Metadata of an Image
+        exiftool image.jpg
+
+
+This command shows all metadata stored in the image.
+
+Example 2: View Specific Metadata
+     exiftool -Model -Make image.jpg
+
+
+This shows the camera model and brand used.
+
+Example 3: Check GPS Information
+     exiftool -GPSLatitude -GPSLongitude image.jpg
+
+
+Used in OSINT to find the location where the photo was taken.
+
+Example 4: Remove All Metadata
+     exiftool -all= image.jpg
+
+
+This removes all metadata from the image and creates a clean copy.
+
+Demonstration on a File
+
+When ExifTool was run on an image file, it revealed:
+
+    1.File type
+
+    2.Creation date
+
+    3.Software used to edit the image
+
+    4.This proves that ExifTool can extract useful hidden information from files.
+
+Conclusion:
+    ExifTool is a powerful and easy-to-use tool for metadata analysis.
+It is very useful in OSINT and forensic investigations to uncover hidden details inside files.
